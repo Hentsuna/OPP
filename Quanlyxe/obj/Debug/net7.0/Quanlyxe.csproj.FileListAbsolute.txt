@@ -1,0 +1,15 @@
+D:\cs\Quanlyxe\obj\Debug\net7.0\Quanlyxe.csproj.AssemblyReference.cache
+D:\cs\Quanlyxe\obj\Debug\net7.0\Quanlyxe.GeneratedMSBuildEditorConfig.editorconfig
+D:\cs\Quanlyxe\obj\Debug\net7.0\Quanlyxe.AssemblyInfoInputs.cache
+D:\cs\Quanlyxe\obj\Debug\net7.0\Quanlyxe.AssemblyInfo.cs
+D:\cs\Quanlyxe\obj\Debug\net7.0\Quanlyxe.csproj.CoreCompileInputs.cache
+D:\cs\Quanlyxe\bin\Debug\net7.0\Quanlyxe.exe
+D:\cs\Quanlyxe\bin\Debug\net7.0\Quanlyxe.deps.json
+D:\cs\Quanlyxe\bin\Debug\net7.0\Quanlyxe.runtimeconfig.json
+D:\cs\Quanlyxe\bin\Debug\net7.0\Quanlyxe.dll
+D:\cs\Quanlyxe\bin\Debug\net7.0\Quanlyxe.pdb
+D:\cs\Quanlyxe\obj\Debug\net7.0\Quanlyxe.dll
+D:\cs\Quanlyxe\obj\Debug\net7.0\refint\Quanlyxe.dll
+D:\cs\Quanlyxe\obj\Debug\net7.0\Quanlyxe.pdb
+D:\cs\Quanlyxe\obj\Debug\net7.0\Quanlyxe.genruntimeconfig.cache
+D:\cs\Quanlyxe\obj\Debug\net7.0\ref\Quanlyxe.dll

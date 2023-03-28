@@ -1,0 +1,15 @@
+D:\cs\DSPhanSo\bin\Debug\net7.0\DSPhanSo.exe
+D:\cs\DSPhanSo\bin\Debug\net7.0\DSPhanSo.deps.json
+D:\cs\DSPhanSo\bin\Debug\net7.0\DSPhanSo.runtimeconfig.json
+D:\cs\DSPhanSo\bin\Debug\net7.0\DSPhanSo.dll
+D:\cs\DSPhanSo\bin\Debug\net7.0\DSPhanSo.pdb
+D:\cs\DSPhanSo\obj\Debug\net7.0\DSPhanSo.csproj.AssemblyReference.cache
+D:\cs\DSPhanSo\obj\Debug\net7.0\DSPhanSo.GeneratedMSBuildEditorConfig.editorconfig
+D:\cs\DSPhanSo\obj\Debug\net7.0\DSPhanSo.AssemblyInfoInputs.cache
+D:\cs\DSPhanSo\obj\Debug\net7.0\DSPhanSo.AssemblyInfo.cs
+D:\cs\DSPhanSo\obj\Debug\net7.0\DSPhanSo.csproj.CoreCompileInputs.cache
+D:\cs\DSPhanSo\obj\Debug\net7.0\DSPhanSo.dll
+D:\cs\DSPhanSo\obj\Debug\net7.0\refint\DSPhanSo.dll
+D:\cs\DSPhanSo\obj\Debug\net7.0\DSPhanSo.pdb
+D:\cs\DSPhanSo\obj\Debug\net7.0\DSPhanSo.genruntimeconfig.cache
+D:\cs\DSPhanSo\obj\Debug\net7.0\ref\DSPhanSo.dll

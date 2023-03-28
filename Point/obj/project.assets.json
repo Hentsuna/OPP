@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\cs\\DSPhanSo\\DSPhanSo.csproj",
-      "projectName": "DSPhanSo",
-      "projectPath": "D:\\cs\\DSPhanSo\\DSPhanSo.csproj",
+      "projectUniqueName": "D:\\cs\\Point\\Point.csproj",
+      "projectName": "Point",
+      "projectPath": "D:\\cs\\Point\\Point.csproj",
       "packagesPath": "C:\\Users\\damtr\\.nuget\\packages\\",
-      "outputPath": "D:\\cs\\DSPhanSo\\obj\\",
+      "outputPath": "D:\\cs\\Point\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\damtr\\AppData\\Roaming\\NuGet\\NuGet.Config"

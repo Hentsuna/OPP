@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\cs\\DSPhanSo\\DSPhanSo.csproj": {}
+    "D:\\cs\\Quanlyxe\\Quanlyxe.csproj": {}
   },
   "projects": {
-    "D:\\cs\\DSPhanSo\\DSPhanSo.csproj": {
+    "D:\\cs\\Quanlyxe\\Quanlyxe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\cs\\DSPhanSo\\DSPhanSo.csproj",
-        "projectName": "DSPhanSo",
-        "projectPath": "D:\\cs\\DSPhanSo\\DSPhanSo.csproj",
+        "projectUniqueName": "D:\\cs\\Quanlyxe\\Quanlyxe.csproj",
+        "projectName": "Quanlyxe",
+        "projectPath": "D:\\cs\\Quanlyxe\\Quanlyxe.csproj",
         "packagesPath": "C:\\Users\\damtr\\.nuget\\packages\\",
-        "outputPath": "D:\\cs\\DSPhanSo\\obj\\",
+        "outputPath": "D:\\cs\\Quanlyxe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\damtr\\AppData\\Roaming\\NuGet\\NuGet.Config"
