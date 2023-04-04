@@ -44,7 +44,7 @@ namespace Bai2_3
     {
         public int SL;
         Point[] DSP = null!;
-
+        Point tam = new Point(0,0);
         public void Nhap()
         {
             Console.Write("Nhap so luong toa do: ");
@@ -68,9 +68,9 @@ namespace Bai2_3
         }
 
         //Tim diem cach xa goc toa do nhat
-        private double KCPoint(Point p)
+        private double KCPoint(Point p1, Point p2)
         {
-            return Math.Sqrt(Math.Pow(p.X,2) + Math.Pow(p.Y,2));
+            return Math.Sqrt(Math.Pow(p1.X - p2.X,2) + Math.Pow(p1.Y - p2.Y,2));
         }
 
         public void MaxPoint()
@@ -78,34 +78,35 @@ namespace Bai2_3
             double max = 0;
             for(int i=1; i<SL; i++)
             {
-                if(max<KCPoint(DSP[i]))
+                if(max<KCPoint(DSP[i], tam))
                 {
                     max = i;
                 }
             }
-            Console.Write("Toa do diem lon nhat la: ");
+            Console.Write("Toa do diem xa tam nhat la: ");
             DSP[(int)max].Xuat();
         }
 
         public void MaxTwoP()
         {
-            double max = Math.Abs(KCPoint(DSP[0]) - KCPoint(DSP[1]));
+            double max = KCPoint(DSP[0], DSP[1]);
             int temp1 = 0, temp2 = 0;
             for(int i=0; i<SL-1; i++)
             {
                 for(int j=i+1; j<SL; j++)
                 {
-                    if(max > Math.Abs(KCPoint(DSP[i]) - KCPoint(DSP[j])))
+                    if(max > KCPoint(DSP[i], DSP[j]))
                     {
                         temp1 = i;
                         temp2 = j;
                     }
-                    Console.Write("\nToa do 2 diem gan nhat la: {0},{1}",i,j);
+                    // Console.Write("\nToa do 2 diem gan nhat la: {0},{1}",i,j);
                 }
             }
-            Console.Write("\nToa do 2 diem gan nhat la:");
-            DSP[(int)temp1].Xuat();
-            DSP[(int)temp2].Xuat();
+            Console.Write("\nToa do 2 diem gan nhat la: ");
+            DSP[temp1].Xuat();
+            Console.Write(" va ");
+            DSP[temp2].Xuat();
         }
     }
     
