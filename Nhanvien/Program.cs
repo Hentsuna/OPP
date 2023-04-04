@@ -6,18 +6,55 @@ public class NhanVien
     private int _luong;
     public string HoTen
     {
-        get{return _hoTen;}
-        set{_hoTen = value;}
+        get { return _hoTen; }
+        set { _hoTen = value; }
     }
     public string NgaySinh
     {
-        get{return _ngaySinh;}
-        set{_ngaySinh = value;}
+        get { return _ngaySinh; }
+        set
+        {
+            try
+            {
+                int temp = Convert.ToInt32(value);
+                if (temp < 32 || temp > 0)
+                {
+                    _ngaySinh = value;
+                }
+                else
+                {
+                    throw new Exception("Ngay sinh khong hop le");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
     public int Luong
     {
-        get{return _luong;}
-        set{_luong = value;}
+        get { return _luong; }
+        set
+        {
+            try
+            {
+                if (value < 0)
+                {
+                    throw new Exception("Luong be hon 0");
+                }
+                else
+                {
+                    _luong = value;
+                }
+
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+        }
     }
     public NhanVien(string ht = "", string ns = "")
     {
@@ -33,7 +70,7 @@ public class NhanVien
     }
     public virtual void Xuat()
     {
-        Console.Write("Thong tin nhan vien: {0}, {1}\n",_hoTen, _ngaySinh);
+        Console.Write("Thong tin nhan vien: {0}, {1}\n", _hoTen, _ngaySinh);
     }
 }
 //Tao lop nhan vien san xuat
@@ -42,16 +79,16 @@ public class NhanVienSanXuat : NhanVien
     private int _soSanPham;
     public int SoSanPham
     {
-        get{return _soSanPham;}
-        set{_soSanPham = value;}
+        get { return _soSanPham; }
+        set { _soSanPham = value; }
     }
     private int _luongCanBan;
     public int LuongCanBan
     {
-        get{return _luongCanBan;}
-        set{_luongCanBan = value;}
+        get { return _luongCanBan; }
+        set { _luongCanBan = value; }
     }
-    public NhanVienSanXuat(string ht = "", string ns = "", int lcb = 0, int ssp = 0): base(ht,ns)
+    public NhanVienSanXuat(string ht = "", string ns = "", int lcb = 0, int ssp = 0) : base(ht, ns)
     {
         _luongCanBan = lcb;
         _soSanPham = ssp;
@@ -69,7 +106,7 @@ public class NhanVienSanXuat : NhanVien
     public override void Xuat()
     {
         base.Xuat();
-        Console.Write(", {0}",Luong);
+        Console.Write(", {0}", Luong);
     }
 }
 //Tao lop nhan vien van phong
@@ -81,8 +118,8 @@ public class NhanVienVanPhong : NhanVien
         get { return _soNgayLam; }
         set { _soNgayLam = value; }
     }
-    
-    public NhanVienVanPhong(string ht = "", string ns = "", int snl = 0): base(ht,ns)
+
+    public NhanVienVanPhong(string ht = "", string ns = "", int snl = 0) : base(ht, ns)
     {
         _soNgayLam = snl;
     }
@@ -96,7 +133,7 @@ public class NhanVienVanPhong : NhanVien
     public override void Xuat()
     {
         base.Xuat();
-        Console.Write(", {0}",Luong);
+        Console.Write(", {0}", Luong);
     }
 }
 
@@ -112,41 +149,41 @@ public class DSNhanVien
     public void Nhap()
     {
         Console.Write("Nhap so luong nhan vien: ");
-        _soLuongNV  = Convert.ToInt32(Console.ReadLine());
-        for(int i=0; i<_soLuongNV; i++)
+        _soLuongNV = Convert.ToInt32(Console.ReadLine());
+        for (int i = 0; i < _soLuongNV; i++)
         {
             int temp;
             Console.WriteLine("Chon 1 neu la nhan vien san xuat, 2 la nhan vien van phong: ");
             temp = Convert.ToInt32(Console.ReadLine());
             switch (temp)
             {
-                case 1: 
-                Console.WriteLine("Nhan vien thu {0}:",i);
-                DSNV[i] = new NhanVienSanXuat();
-                DSNV[i].Nhap();
-                break;
+                case 1:
+                    Console.WriteLine("Nhan vien thu {0}:", i);
+                    DSNV[i] = new NhanVienSanXuat();
+                    DSNV[i].Nhap();
+                    break;
                 case 2:
-                Console.WriteLine("Nhan vien thu {0}:",i+1);
-                DSNV[i] = new NhanVienVanPhong();
-                DSNV[i].Nhap();
-                break;
+                    Console.WriteLine("Nhan vien thu {0}:", i + 1);
+                    DSNV[i] = new NhanVienVanPhong();
+                    DSNV[i].Nhap();
+                    break;
             }
         }
     }
     public void Xuat()
     {
-        for(int i=0; i<_soLuongNV; i++)
+        for (int i = 0; i < _soLuongNV; i++)
         {
             DSNV[i].Xuat();
         }
     }
     public void SapXep()
     {
-        for(int i=0; i<_soLuongNV-1; i++)
+        for (int i = 0; i < _soLuongNV - 1; i++)
         {
-            for(int j=1; j<_soLuongNV; j++)
+            for (int j = 1; j < _soLuongNV; j++)
             {
-                if(DSNV[i].Luong > DSNV[j].Luong)
+                if (DSNV[i].Luong > DSNV[j].Luong)
                 {
                     NhanVien temp = DSNV[i];
                     DSNV[i] = DSNV[j];
