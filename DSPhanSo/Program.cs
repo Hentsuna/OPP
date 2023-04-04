@@ -95,18 +95,6 @@ namespace Bai2_2
 
         public void Adv()
         {
-            // for(int i=0; i<_size-1; i++)
-            // {
-            //     for(int j=1; j<_size; j++)
-            //     {
-            //         if(DSPS[i].DbPS() > DSPS[j].DbPS())
-            //         {
-            //             PhanSo temp = DSPS[i];
-            //             DSPS[i] = DSPS[j];
-            //             DSPS[j] = temp;
-            //         }
-            //     }
-            // }
             DSPS.Sort((x, y) => x.DbPS().CompareTo(y.DbPS()));
         }
     } // End of class DSPhanSo
