@@ -54,18 +54,17 @@ namespace Bai2_2
             set{_size = value;}
         }
 
-        PhanSo[] DSPS;
+        List<PhanSo> DSPS = new List<PhanSo>();
         
         public void Nhap()
         {
             Console.Write("So luong phan so: ");
             _size = Convert.ToInt32(Console.ReadLine());
             //Nhap mang phan so
-            DSPS = new PhanSo[_size];
             for(int i=0; i<_size; i++)
             {
                 Console.WriteLine("Phan so thu {0} ", i+1);
-                DSPS[i] = new PhanSo(0,0);
+                DSPS.Add(new PhanSo(0, 0));
                 DSPS[i].Nhap();
             }
         }
@@ -96,18 +95,19 @@ namespace Bai2_2
 
         public void Adv()
         {
-            for(int i=0; i<_size-1; i++)
-            {
-                for(int j=1; j<_size; j++)
-                {
-                    if(DSPS[i].DbPS() > DSPS[j].DbPS())
-                    {
-                        PhanSo temp = DSPS[i];
-                        DSPS[i] = DSPS[j];
-                        DSPS[j] = temp;
-                    }
-                }
-            }
+            // for(int i=0; i<_size-1; i++)
+            // {
+            //     for(int j=1; j<_size; j++)
+            //     {
+            //         if(DSPS[i].DbPS() > DSPS[j].DbPS())
+            //         {
+            //             PhanSo temp = DSPS[i];
+            //             DSPS[i] = DSPS[j];
+            //             DSPS[j] = temp;
+            //         }
+            //     }
+            // }
+            DSPS.Sort((x, y) => x.DbPS().CompareTo(y.DbPS()));
         }
     } // End of class DSPhanSo
 
